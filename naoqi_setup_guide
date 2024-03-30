@@ -1,1 +1,26 @@
+To set the path of Naoqi SDK in Ubuntu using Python 2.7 and write it in GitHub file format, follow these steps:
 
+Download Naoqi SDK:
+
+Go to the Softbank Robotics website and download the Naoqi SDK for Python 2.7 compatible with your operating system.
+Extract Naoqi SDK:
+
+Extract the downloaded Naoqi SDK file to a location on your computer, e.g., ~/naoqi-sdk.
+Set Environment Variables:
+
+Open a terminal and edit the .bashrc file using a text editor (e.g., nano ~/.bashrc).
+Add the following lines to the end of the file, replacing /path/to/naoqi-sdk with the actual path to your extracted Naoqi SDK folder:
+
+export PYTHONPATH=$PYTHONPATH:/path/to/naoqi-sdk/lib/python2.7/site-packages
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/path/to/naoqi-sdk/lib
+
+Save and close the .bashrc file.
+
+Apply Changes:
+To apply the changes, either restart your terminal or run the following command:
+source ~/.bashrc
+
+Test Naoqi SDK Installation:
+To test if the Naoqi SDK is correctly set up, run a Python 2.7 interpreter in the terminal and try to import the naoqi module:
+python2.7
+import naoqi
